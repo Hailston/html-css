@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淘宝广告</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .tp-promo {
+            position: relative;
+            margin: 100px auto;
+            width: 520px;
+            height: 280px;
+        }
+
+        .tp-promo img {
+            width: 520px;
+            height: 280px;
+        }
+
+        .tp-promo a {
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+
+            width: 20px;
+            height: 30px;
+            color: white;
+            background-color: rgba(0, 0, 0, .3);
+
+            text-align: center;
+        }
+
+        .tp-promo .prev {
+            left: 0;
+            border-radius: 0 15px 15px 0;
+        }
+
+        .tp-promo .next {
+            right: 0;
+            border-radius: 15px 0 0 15px;
+        }
+
+        .tp-promo .promo-nav {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            margin-left: -35px;
+            width: 70px;
+            height: 13px;
+
+            background-color: rgba(255, 255, 255, .3);
+            border-radius: 7px;
+
+        }
+
+        .tp-promo .promo-nav li {
+            float: left;
+            margin: 3px;
+            width: 8px;
+            height: 8px;
+
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .tp-promo .promo-nav li.active {
+            background-color: #ff5000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tp-promo">
+        <img src="./images/tb.jpg" alt="tb">
+        <a href="#" class="prev">&lt;</a>
+        <a href="#" class="next">&gt;</a>
+        <ul class="promo-nav">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="active"></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>
