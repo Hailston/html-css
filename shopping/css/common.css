@@ -11,6 +11,15 @@
     font-display: block;
 }
 
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    height: 0;
+    width: 0;
+    display: table;
+    clear: both;
+}
+
 /* 版心 */
 .w {
     width: 1200px;
@@ -93,7 +102,7 @@
 
 .header .search button {
     float: left;
-    width: 81px;
+    width: 80px;
     height: 34px;
     background-color: #b1191a;
     color: #ffff;
@@ -146,8 +155,12 @@
 }
 
 nav.nav {
+    position: sticky;
+    z-index: 99999;
+    top: 0;
     height: 47px;
     border-bottom: 2px solid #b1191a;
+    background-color: white;
 }
 
 nav.nav .dropdown {
@@ -176,7 +189,6 @@ nav.nav .dropdown .dd {
     width: 210px;
     height: 465px;
     background-color: #c81623;
-    transition: all 5s;
 }
 
 nav.nav .dropdown .dd li {
@@ -228,14 +240,85 @@ nav.nav .navitems li a {
 
 footer.footer {
     padding-top: 30px;
-    height: 417px;
+    height: 415px;
     background-color: #f5f5f5;
 }
 
 footer.footer .mod_service {
+    height: 80px;
     border-bottom: 1px solid #ededed;
 }
 
 footer.footer .mod_service li {
-    width: 240px;
+    float: left;
+    padding-left: 35px;
+    width: 300px;
+    height: 50px;
+}
+
+footer.footer .mod_service li h5 {
+    float: left;
+    margin-right: 8px;
+    width: 50px;
+    height: 50px;
+    background: url(../images/icons.png) no-repeat -252px -2px;
+}
+
+footer.footer .mod_service li .service_txt h4 {
+    font-size: 14px;
+}
+
+footer.footer .mod_service li .service_txt p {
+    font-size: 12px;
+}
+
+footer.footer .mod_help {
+    padding-top: 20px;
+    padding-left: 50px;
+    height: 185px;
+    border-bottom: 1px solid #ccc;
+}
+
+footer.footer .mod_help dl {
+    float: left;
+    width: 200px;
+}
+
+footer.footer .mod_help dl:last-child {
+    width: 90px;
+    text-align: center;
+}
+
+footer.footer .mod_help dt {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+footer.footer .mod_copyright {
+    text-align: center;
+    padding-top: 20px;
+}
+
+footer.footer .mod_copyright .links {
+    margin-bottom: 15px;
+}
+
+footer.footer .mod_copyright .links ul {
+    margin: 0 auto;
+    width: 871px;
+}
+
+footer.footer .mod_copyright .links li {
+    float: left;
+}
+
+footer.footer .mod_copyright .links li:nth-child(even) {
+    margin: 0 10px;
+    width: 1px;
+    height: 18px;
+    background-color: #ccc;
+}
+
+footer.footer .mod_copyright .copyright {
+    line-height: 20px;
 }
