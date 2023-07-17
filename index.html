@@ -9,34 +9,53 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
-        .box {
-            margin: 100px auto;
-            width: 200px;
-            height: 15px;
-            border: 1px solid red;
-            border-radius: 7px;
-        }
-
-        .box .process {
-            width: 30px;
-            height: 100%;
+        section {
+            display: flex;
+            margin: 0 auto;
+            width: 60%;
+            height: 150px;
             background-color: pink;
-            border-radius: 7px;
-            transition: all .5s;
         }
 
-        .box:hover .process {
-            width: 100%;
+        section div:nth-child(1) {
+            width: 100px;
+            height: 150px;
+            background-color: red;
+            order: 1;
+        }
+
+        section div:nth-child(2) {
+            flex: 1;
+            background-color: purple;
+            order: 3;
+        }
+
+        section div:nth-child(3) {
+            width: 100px;
+            height: 150px;
+            background-color: skyblue;
+        }
+
+        section span {
+            flex: 1;
         }
     </style>
 </head>
 
 <body>
-    <div class="box">
-        <div class="process"></div>
-    </div>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <section>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </section>
 </body>
 
 </html>
