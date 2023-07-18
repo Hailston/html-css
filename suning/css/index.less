@@ -1,0 +1,98 @@
+@import 'common';
+
+@baseFont: 50;
+
+body {
+    margin: 0 auto;
+    width: 15rem;
+    min-width: 320px;
+    line-height: 1.5;
+    font-family: arial, Helvetica;
+    background: #f2f2f2;
+}
+
+.search-content {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: (88rem / @baseFont);
+    background: #ffc001;
+
+    .classify {
+        margin: (11rem / @baseFont) (25rem / @baseFont) (7rem / @baseFont) (24rem / @baseFont);
+        width: (44rem / @baseFont);
+        height: (70rem / @baseFont);
+        background: url(../images/classify.png) no-repeat;
+        background-size: (44rem / @baseFont) (70rem / @baseFont);
+    }
+
+    .search {
+        flex: 1;
+        padding-left: (55rem / @baseFont);
+        height: (66rem / @baseFont);
+        font-size: (25rem / @baseFont);
+        color: #ccc;
+        line-height: (66rem / @baseFont);
+        background-color: #fff2cc;
+        border-radius: (33rem / @baseFont);
+    }
+
+    .login {
+        margin: (10rem / @baseFont);
+        width: (75rem / @baseFont);
+        height: (70rem / @baseFont);
+        text-align: center;
+        font-size: (25rem / @baseFont);
+        line-height: (70rem / @baseFont);
+        color: #fff;
+    }
+}
+
+.banner {
+    width: (750rem / @baseFont);
+    height: (368rem / @baseFont);
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.ad {
+    display: flex;
+
+    a {
+        flex: 1s;
+
+        img {
+            width: 100%;
+            vertical-align: middle;
+        }
+    }
+}
+
+nav.nav {
+    width: (750rem / @baseFont);
+
+    a {
+        float: left;
+        width: (150rem / @baseFont);
+        height: (140rem / @baseFont);
+        text-align: center;
+
+        img {
+            display: block;
+            width: (82rem / @baseFont);
+            height: (82rem / @baseFont);
+            margin: (10rem / @baseFont) auto 0;
+        }
+
+        span {
+            display: block;
+            font-size: (25rem / @baseFont);
+            color: #333;
+        }
+    }
+}
